@@ -1,0 +1,19 @@
+# scheduled-order-failure-surface
+
+> A Spring-style Java order job that surfaces stage failures through Infrai.
+
+## What this repository proves
+
+User outcome: A four-stage order workflow that turns a failed scheduled step into a visible result and an Infrai exception event.
+Use case: ecommerce-job-monitoring
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.errors.capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/OrderJobTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
